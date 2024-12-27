@@ -9,10 +9,10 @@
     <div class="container">
         <h1>FMI Calculator</h1>
         <form id="fmiForm">
-            <label for="foreheadWidth">Forehead Width (cm):</label>
-            <input type="number" id="foreheadWidth" placeholder="Enter forehead width" required>
-            <label for="foreheadHeight">Forehead Height (cm):</label>
-            <input type="number" id="foreheadHeight" placeholder="Enter forehead height" required>
+            <label for="mass">Forehead Width (cm):</label>
+            <input type="number" id="mass" placeholder="Enter forehead mass (kg)" required> <\br>
+            <label for="volume">Forehead Height (cm):</label>
+            <input type="number" id="volume" placeholder="Enter forehead volume (m³)" required>
             <button type="submit">Calculate FMI</button>
         </form>
         <div id="result"></div>
@@ -23,11 +23,11 @@
 
         fmiForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            const width = parseFloat(document.getElementById('foreheadWidth').value);
-            const height = parseFloat(document.getElementById('foreheadHeight').value);
+            const mass = parseFloat(document.getElementById('mass').value);
+            const volume = parseFloat(document.getElementById('volume').value);
             
-            if (!isNaN(width) && !isNaN(height) && width > 0 && height > 0) {
-                const fmi = (width * height).toFixed(2);
+            if (!isNaN(mass) && !isNaN(volume) && mass > 0 && volume > 0) {
+                const fmi = (mass / volume).toFixed(2);
                 resultDiv.textContent = `Your Forehead Mass Index (FMI) is: ${fmi}`;
             } else {
                 resultDiv.textContent = 'Please enter valid positive numbers for both width and height.';
