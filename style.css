@@ -1,0 +1,19 @@
+body {
+    background-color: #f0f4f5;
+}
+
+h1 {
+    text-align: center;
+    color: #212b32;
+}
+
+html {
+    font-family: Frutiger W01,Arial,Sans-serif;
+}
+form {
+    text-align: center;
+}
+
+#result {
+    text-align: center;
+}
