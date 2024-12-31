@@ -1,8 +1,19 @@
 body {
     background-color: #f0f4f5;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */;
 }
 
 h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #212b32;
+    border: 1;
+}
+
+i, b {
     text-align: center;
     color: #212b32;
 }
@@ -14,6 +25,18 @@ form {
     text-align: center;
 }
 
+button {
+    
+    font-size: 2em;
+}
+
 #result {
     text-align: center;
+    max-width: 500px;
+}
+
+#result_image {
+    text-align: center;
+    align-self: center;
+    color: f0f4f5;
 }
