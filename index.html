@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FMI Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="image.png">
-</head>
-<body>
-    <div class="container">
-        <h1>FMI Calculator</h1>
-        <form id="fmiForm">
-            <label for="mass">Forehead mass (kg):</label>
-            <input type="number" id="mass" placeholder="e.g 60" required> <br> <br>
-            <label for="volume">Forehead volume (m³):</label>
-            <input type="number" id="volume" placeholder="e.g 30" required> <br> <br>
-            <button type="submit">Calculate FMI</button>
-        </form>
-        <br>
-        <div id="result"></div>
-    </div>
-    <script>
-        const fmiForm = document.getElementById('fmiForm');
-        const resultDiv = document.getElementById('result');
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FMI Calculator</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="image.png">
+        <script source="script.js"></script>
+    </head>
 
-        fmiForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const mass = parseFloat(document.getElementById('mass').value);
-            const volume = parseFloat(document.getElementById('volume').value);
-            
-            if (!isNaN(mass) && !isNaN(volume) && mass > 0 && volume > 0) {
-                const fmi = (mass / volume).toFixed(2);
-                resultDiv.textContent = `Your Forehead Mass Index (FMI) is: ${fmi}`;
-            } else {
-                resultDiv.textContent = 'Please enter valid positive numbers for both width and height.';
-            }
-        });
-    </script>
-</body>
+    <body>
+        <div class="container">
+            <h1>Calculate your Forehead Mass Index (FMI)</h1>
+            <i id="note">Note: <b>All foreheads are equal.</b> Your FMI is not a measure of your 
+                abilities in any aspect, including: physical, mental, emotional, spiritual,
+                financial, intellectual, social, psychological, biological, professional,
+                relational, grammatical, cultural, moral, ethical, political, environmental,
+                practical, theoretical, personal or interpersonal capabilities.</i>
+            <form id="fmiForm">
+            <br> <br>
+                <label for="mass">Forehead mass (kg):</label>
+                <input type="number" id="mass" placeholder="e.g 60" required> <br> <br>
+                <label for="volume">Forehead volume (m³):</label>
+                <input type="number" id="volume" placeholder="e.g 30" required> <br> <br>
+                <button type="submit">Calculate FMI</button>
+            </form>
+            <br>
+            <div id="result"></div>
+            <img id="result_image" src="no_forehead.jpg" alt="Forehead Image" width="450px" height="500px"/>
+            <img id="result_image" src="small_forehead.jpg" alt="Forehead Image" width="450px" height="500px"/>
+            <img id="result_image" src="average_forehead.jpg" alt="Forehead Image" width="450px" height="500px"/>
+            <img id="result_image" src="big_forehead.jpg" alt="Forehead Image" width="450px" height="500px"/>
+            <img id="result_image" src="infinite_forehead.jpg" alt="Forehead Image" width="450px" height="500px"/>
+        </div>
+    </body>
 </html>
