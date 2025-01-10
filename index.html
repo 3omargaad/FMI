@@ -21,17 +21,21 @@
         </div>
         <form id="fmiForm">
             <label for="name">Forehead Name:</label>
-            <input type="text" id="name" placeholder="e.g Rick Astley"> <br> <br>
+            <input type="text" id="name" class="input_text" placeholder="e.g Rick Astley"> <br> <br>
             <label for="mass">Forehead Mass (kg):</label>
-            <input type="number" id="mass" placeholder="e.g 60" required> <br> <br>
+            <input type="number" id="mass" class="input_text" placeholder="e.g 60" required> <br> <br>
             <label for="volume">Forehead Volume (m³):</label>
-            <input type="number" id="volume" placeholder="e.g 30" required> <br> <br>
-            <label for="color">Forehead Colour</label>
+            <input type="number" id="volume" class="input_text" placeholder="e.g 30" required> <br> <br>
+            <label for="color">Forehead Colour:</label>
             <input type="color" id="color" placeholder="e.g 30"> <br> <br>
             <label for="gender">Forehead Gender:</label>
-            <input type="password" id="gender" placeholder="e.g Male"> <br> <br>
+            <select id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Idk">I don't know</option>
+             </select> <br> <br>
 
-            <label>How would other people describe your Forehead's Personality?</label> <br>
+            <label>How would other people describe your forehead's personality?</label> <br>
             <input type="radio" id="shiny" name="shine" value="super_shiny">
             <label for="shiny">Zen Vibes</label>
             <input type="radio" id="dull" name="shine" value="kinda_shiny">
@@ -39,7 +43,7 @@
             <input type="radio" id="dull" name="shine" value="kinda_shiny">
             <label for="dull">Suffering in Silence</label>
             <input type="radio" id="shiny" name="shine" value="super_shiny">
-            <label for="shiny">Rizz</label>
+            <label for="shiny">Very Handsome</label>
             <input type="radio" id="shiny" name="shine" value="super_shiny">
             <label for="shiny">Big Brain Energy</label> <br> <br>
             
