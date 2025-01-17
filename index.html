@@ -12,14 +12,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Henny+Penny&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Chewy&family=Henny+Penny&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap" rel="stylesheet">
-        <script source="script.js"></script>
     </head>
 
     <body>
         <div class="heading">
             <h1>Calculate Forehead Mass Index (FMI)</h1>
         </div>
-        <form id="fmiForm" action="result.html" method="get">
+        <form id="fmi_form" action="result.html" method="get">
             <label for="name">Forehead Name:</label>
             <input type="text" id="name" class="input_text" placeholder="e.g Rick Astley"> <br> <br>
             <label for="mass">Forehead Mass (kg):</label>
@@ -51,6 +50,7 @@
             <input type="checkbox" id="age" required> <br> <br>
             <button type="submit">Calculate</button>
         </form>
+        <script src="script.js"></script>
         <div id="result"></div>
         <!--
         <img id="result_image" src="no_forehead.jpg" alt="Forehead Image" width="450px" height="500px"/>
