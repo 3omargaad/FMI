@@ -22,9 +22,9 @@
             <label for="name">Forehead Name:</label>
             <input type="text" id="name" class="input_text" placeholder="e.g Rick Astley"> <br> <br>
             <label for="mass">Forehead Mass (kg):</label>
-            <input type="number" id="mass" class="input_text" placeholder="e.g 60" required> <br> <br>
+            <input type="number" id="mass" class="input_text" placeholder="min 0, max 100" min="0", max="100" required> <br> <br>
             <label for="volume">Forehead Volume (m³):</label>
-            <input type="number" id="volume" class="input_text" placeholder="e.g 30" required> <br> <br>
+            <input type="number" id="volume" class="input_text" placeholder="min 0, max 100" min="0", max="100" required> <br> <br>
             <label for="color">Forehead Colour:</label>
             <input type="color" id="color" placeholder="e.g 30"> <br> <br>
             <label for="gender">Forehead Gender:</label>
@@ -51,13 +51,5 @@
             <button type="submit">Calculate</button>
         </form>
         <script src="script.js"></script>
-        <div id="result"></div>
-        <!--
-        <img id="result_image" src="no_forehead.jpg" alt="Forehead Image" width="450px" height="500px"/>
-        <img id="result_image" src="small_forehead.jpg" alt="Forehead Image" width="450px" height="500px"/>
-        <img id="result_image" src="average_forehead.jpg" alt="Forehead Image" width="450px" height="500px"/>
-        <img id="result_image" src="big_forehead.jpg" alt="Forehead Image" width="450px" height="500px"/>
-        <img id="result_image" src="infinite_forehead.jpg" alt="Forehead Image" width="450px" height="500px"/>
-        -->
     </body>
 </html>

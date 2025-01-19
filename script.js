@@ -46,8 +46,10 @@ document.getElementById('fmi_form').addEventListener('submit', function(event) {
     const name = document.getElementById('name').value;
     const mass = document.getElementById('mass').value;
     const volume = document.getElementById('volume').value;
+
+    const fmi = 50 + ((volume - mass) * 1/4)
     
-    print(`Name: ${name}`, "fmi_result");
+    alert(`${name} Your FMI is ${fmi}`);
     //print(`Mass: ${mass}`, "fmi_result");
     //print(`Volume: ${volume}`, "fmi_result");
 });
