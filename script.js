@@ -28,7 +28,7 @@ function calculate_fmi(mass, volume, color, gender, personality) {
     if (r > b) {
         colorValue = -5;
     } else if (b > r) {
-        colorValue = -5;
+        colorValue = 5;
     }
 
     switch (gender) {
@@ -95,9 +95,8 @@ document.getElementById('fmi_form').addEventListener('submit', function(event) {
     const fmi = calculate_fmi(mass, volume, color, gender, personality)
     const fmi_type = calculate_fmi_type(fmi)
     
-    alert(personality)
     alert(`${name} Your FMI is ${fmi}`);
-    alert(fmi_type)
+    alert(`Forehead type: ${fmi_type}`)
     //print(`Mass: ${mass}`, "fmi_result");
     //print(`Volume: ${volume}`, "fmi_result");
 });
