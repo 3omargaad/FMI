@@ -17,8 +17,49 @@ function print(output, id) {
 }
 
 
-function calculate_fmi(mass, volume) {
-    let FMI = 50 + ((volume - mass) / 4);
+function calculate_fmi(mass, volume, color, gender, personality) {
+    const r = parseInt(color.slice(1, 3), 16);
+    //const g = parseInt(color.slice(3, 5), 16);
+    const b = parseInt(color.slice(5, 7), 16);
+    let colorValue = 0;
+    let genderValue = 0;
+    let personalityValue = 0;
+
+    if (r > b) {
+        colorValue = -5;
+    } else if (b > r) {
+        colorValue = -5;
+    }
+
+    switch (gender) {
+        case "Female":
+            genderValue = -10;
+            break;
+        case "Male":
+            genderValue = 10;
+            break;
+        default:
+            break;
+    }
+
+    switch (personality) {
+        case "Zen-Vibes":
+            personalityValue = -10; 
+            break;
+        case "Lowkey-Savage":
+            personalityValue = -5; 
+            break;
+        case "Very-Handsome":
+            personalityValue = 5; 
+            break;
+        case "Big-Brain-Energy":
+            personalityValue = 10; 
+            break;
+        default:
+            break;
+    }
+    const X_factors = colorValue + genderValue + personalityValue
+    const FMI = 50 + ((volume - mass) / 4) + X_factors;
     return FMI;
 }
 
@@ -46,10 +87,17 @@ document.getElementById('fmi_form').addEventListener('submit', function(event) {
     const name = document.getElementById('name').value;
     const mass = document.getElementById('mass').value;
     const volume = document.getElementById('volume').value;
+    const color = document.getElementById('color').value;
+    const gender = document.getElementById('gender').value;
+    const personality = document.querySelector('input[name="personality"]:checked').id;
 
-    const fmi = 50 + ((volume - mass) * 1/4)
+
+    const fmi = calculate_fmi(mass, volume, color, gender, personality)
+    const fmi_type = calculate_fmi_type(fmi)
     
+    alert(personality)
     alert(`${name} Your FMI is ${fmi}`);
+    alert(fmi_type)
     //print(`Mass: ${mass}`, "fmi_result");
     //print(`Volume: ${volume}`, "fmi_result");
 });

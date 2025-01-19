@@ -22,11 +22,11 @@
             <label for="name">Forehead Name:</label>
             <input type="text" id="name" class="input_text" placeholder="e.g Rick Astley"> <br> <br>
             <label for="mass">Forehead Mass (kg):</label>
-            <input type="number" id="mass" class="input_text" placeholder="min 0, max 100" min="0", max="100" required> <br> <br>
+            <input type="number" id="mass" class="input_text" placeholder="0-100" min="0", max="100" required> <br> <br>
             <label for="volume">Forehead Volume (m³):</label>
-            <input type="number" id="volume" class="input_text" placeholder="min 0, max 100" min="0", max="100" required> <br> <br>
+            <input type="number" id="volume" class="input_text" placeholder="0-100" min="0", max="100" required> <br> <br>
             <label for="color">Forehead Colour:</label>
-            <input type="color" id="color" placeholder="e.g 30"> <br> <br>
+            <input type="color" id="color"> <br> <br>
             <label for="gender">Forehead Gender:</label>
             <select id="gender">
                 <option value="Male">Male</option>
@@ -35,16 +35,16 @@
              </select> <br> <br>
 
             <label>How would other people describe your forehead's personality?</label> <br>
-            <input type="radio" id="Zen-Vibes" name="forehead-personality" value="Zen-Vibes" required>
-            <label for="shiny">Zen Vibes</label>
-            <input type="radio" id="Lowkey-Savage" name="forehead-personality" value="Lowkey-Savage">
-            <label for="dull">Lowkey Savage</label>
-            <input type="radio" id="Suffering-in-Silence" name="forehead-personality" value="Suffering-in-Silence">
-            <label for="dull">Suffering in Silence</label>
-            <input type="radio" id="Very-Handsome" name="forehead-personality" value="Very-Handsome">
-            <label for="shiny">Very Handsome</label>
-            <input type="radio" id="Big-Brain-Energy" name="forehead-personality" value="Big-Brain-Energy">
-            <label for="shiny">Big Brain Energy</label> <br> <br>
+            <input type="radio" id="Zen-Vibes" name="personality" value="Zen-Vibes">
+            <label for="Zen-Vibes">Zen Vibes</label>
+            <input type="radio" id="Lowkey-Savage" name="personality" value="Lowkey-Savage">
+            <label for="Lowkey-Savage">Lowkey Savage</label>
+            <input type="radio" id="Suffering-in-Silence" name="personality" value="Suffering-in-Silence" required>
+            <label for="Suffering-in-Silence">Suffering in Silence</label>
+            <input type="radio" id="Very-Handsome" name="personality" value="Very-Handsome">
+            <label for="Very-Handsome">Very Handsome</label>
+            <input type="radio" id="Big-Brain-Energy" name="personality" value="Big-Brain-Energy">
+            <label for="Big-Brain-Energy">Big Brain Energy</label> <br> <br>
             
             <label for="age">I have read the <a href="tos.html" target="_blank">Terms Of Service</a> & appreciate my Forehead</label>
             <input type="checkbox" id="age" required> <br> <br>
