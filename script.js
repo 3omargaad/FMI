@@ -8,19 +8,16 @@ function result(fmi_type) {
 
 function input(text) {
     return window.prompt(text)
-    
 }
-
 
 function print(output, id) {
-        document.getElementById(id).innerHTML = output;
+    document.getElementById(id).innerHTML = output;
 }
-
 
 function calculate_fmi(mass, volume, color, gender, personality) {
     const r = parseInt(color.slice(1, 3), 16);
-    //const g = parseInt(color.slice(3, 5), 16);
     const b = parseInt(color.slice(5, 7), 16);
+
     let colorValue = 0;
     let genderValue = 0;
     let personalityValue = 0;
@@ -58,8 +55,10 @@ function calculate_fmi(mass, volume, color, gender, personality) {
         default:
             break;
     }
+
     const X_factors = colorValue + genderValue + personalityValue
     const FMI = 50 + ((volume - mass) / 4) + X_factors;
+
     return FMI;
 }
 
@@ -91,25 +90,11 @@ document.getElementById('fmi_form').addEventListener('submit', function(event) {
     const gender = document.getElementById('gender').value;
     const personality = document.querySelector('input[name="personality"]:checked').id;
 
-
     const fmi = calculate_fmi(mass, volume, color, gender, personality)
     const fmi_type = calculate_fmi_type(fmi)
     
-    alert(`${name} Your FMI is ${fmi}`);
+    alert(`${name}, Your FMI is ${fmi}`);
     alert(`Forehead type: ${fmi_type}`)
     //print(`Mass: ${mass}`, "fmi_result");
     //print(`Volume: ${volume}`, "fmi_result");
 });
-
-
-/*let mass = Number(window.prompt("Enter Forehead Mass"));
-let volume = Number(window.prompt("Enter Forehead Volume"));
-    
-    let FMI = calculate_fmi(mass, volume);
-
-    let type = calculate_fmi_type(FMI);
-
-    print(type, "fmi_result")
-    print(FMI, "fmi")*/
-
-// Check for invalid input*/
