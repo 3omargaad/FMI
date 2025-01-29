@@ -81,7 +81,7 @@ function calculate_fmi_type(FMI) {
 }
 
 document.getElementById('fmi_form').addEventListener('submit', function(event) {
-    //event.preventDefault(); // Prevents the form from reloading the page
+    event.preventDefault(); // Prevents the form from reloading the page
     
     const name = document.getElementById('name').value;
     const mass = document.getElementById('mass').value;
@@ -90,11 +90,14 @@ document.getElementById('fmi_form').addEventListener('submit', function(event) {
     const gender = document.getElementById('gender').value;
     const personality = document.querySelector('input[name="personality"]:checked').id;
 
-    const fmi = calculate_fmi(mass, volume, color, gender, personality)
-    const fmi_type = calculate_fmi_type(fmi)
+    const fmi = calculate_fmi(mass, volume, color, gender, personality);
+    const fmi_type = calculate_fmi_type(fmi);
     
     alert(`${name}, Your FMI is ${fmi}`);
-    alert(`Forehead type: ${fmi_type}`)
+    alert(`Forehead type: ${fmi_type}`);
+
+    print(`FMI: ${fmi}, Forehead Type: ${fmi_type}`, "fmi_result");
+
     //print(`Mass: ${mass}`, "fmi_result");
     //print(`Volume: ${volume}`, "fmi_result");
 });

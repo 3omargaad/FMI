@@ -1,0 +1,170 @@
+:root {
+    --navy: #1a3369;
+    --blue: #2b56b3;
+    --sky: #5580db;
+    --cyan: #beebeb;
+    --cream: #fafad2;
+    --white: #ecfcff;
+    --teal: #006663;
+}
+
+/* Fonts */
+
+  
+body {
+    background-color: var(--cyan);
+    background-image: linear-gradient(to bottom, var(--cyan) 10%, var(--sky) 90%);
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh; /* Full height of the viewport */;
+}
+
+.heading {
+    text-align: center;
+    font-size: 1.75em;
+    color: var(--blue);
+    border: 1;
+    font-weight: 900;
+    font-family: "Atma", serif;
+}
+
+i, b {
+    text-align: center;
+    color: #212b32;
+}
+
+label, #fmi_result {
+    font-family: "Jua", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 400;
+    color: var(--navy);
+}
+.personality-label {
+    font-weight: normal;
+    color: var(--white);
+}
+html {
+    font-family: Frutiger W01,Arial,Sans-serif;
+}
+
+img {
+    display: flex;
+    justify-content: center;
+    border-radius: 15%;
+    border-color: var(--white);
+    border-width: 1em;
+}
+
+.container {
+    display: flex;           /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;           /* Full viewport height for demonstration */
+  }
+  
+img {
+    max-width: 100%; /* Ensure the image resizes if too large */
+    height: auto;    /* Maintain aspect ratio */
+}
+
+form {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+button {
+    font-family: "Frutiger W01", Arial, sans-serif /*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif*/;
+    font-size: 1.5em;
+    font-weight: 600;
+    background-color: var(--teal);
+    box-shadow: rgb(0, 64, 30) 0px 4px 0px 0px;
+    color: beige;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#color, #gender, input, #dull {
+    cursor: pointer;
+}
+
+#name, #mass, #volume {
+    cursor: text;
+}
+
+
+button:hover {
+    font-family: "Frutiger W01", Arial, sans-serif /*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif*/;
+    font-size: 1.5em;
+    font-weight: 600;
+    background-color: rgb(0, 64, 30);
+    box-shadow: var(--teal) 0px 4px 0px 0px;
+    color: beige;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#result {
+    text-align: center;
+    max-width: 500px;
+}
+
+#result_image {
+    text-align: center;
+    align-self: center;
+    color: #f0f4f5;
+}
+
+
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-left: 33%;
+    margin-right: 33%;
+  }
+  
+
+#note {
+    margin-right: 1px;
+    margin-left: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 200px;
+    margin-left: 200px;
+    text-align: center;
+    align-self: center;
+    border-style: inset;
+    font-size: 1.2em;
+    font-family: "Crete Round";
+    background-color: var(--white);
+}
+
+li {
+    margin-right: 1px;
+    margin-left: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 200px;
+    margin-left: 200px;
+    text-align: center;
+    align-self: center;
+    border-style: inset;
+    font-size: 1.2em;
+    font-family: "Jua";
+    background-color: var(--white);
+}
+
+.banner {
+    background-color: #5580db55;
+    margin: 0;
+    align-items:center;
+}

@@ -4,21 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FMI Calculator</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/fonts.css">
         <link rel="icon" type="image/png" href="images/icon.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Henny+Penny&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Chewy&family=Henny+Penny&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <div class="heading">
-            <h1>Calculate Forehead Mass Index (FMI)</h1>
+            <h1 id="main">Calculate Forehead Mass Index (FMI)</h1> 
         </div>
-        <form id="fmi_form" <!--action="result.html"method="get"-->
+        <form id="fmi_form" <!--action="result.html" method="get"-->
             <label for="name">Forehead Name:</label>
             <input type="text" id="name" class="input_text" placeholder="e.g Rick Astley"> <br> <br>
             <label for="mass">Forehead Mass (kg):</label>
@@ -29,6 +24,7 @@
             <input type="color" id="color"> <br> <br>
             <label for="gender">Forehead Gender:</label>
             <select id="gender">
+                <option value="" disabled selected>Please Select</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Idk">I don't know</option>
@@ -50,6 +46,6 @@
             <input type="checkbox" id="age" required> <br> <br>
             <button type="submit">Calculate</button>
         </form>
-        <script src="script.js"></script>
+        <script src="scripts/index.js"></script>
     </body>
 </html>
