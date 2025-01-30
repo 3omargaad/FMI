@@ -5,28 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FMI Calculator</title>
         <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/fonts.css">
         <link rel="icon" type="image/png" href="images/icon.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Henny+Penny&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Chewy&family=Henny+Penny&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-        <script src="scripts/result.js"></script>
     </head>
 
     <body>
         <div class="heading">
-            <h1>You have No Forehead</h1>
+            <h2 id="forehead_type">Result</h2>
         </div>
         <div id="result">
-            <img id="result_image" src="images/no_forehead.png" alt="Forehead Image" width="450px" height="500px"/> 
+            <img id="result_image" src="images/placeholder.gif" alt="Forehead Image" width="450px" height="500px"/> 
             <!--<img id="result_image" src="images/small_forehead.png" alt="Forehead Image" width="450px" height="500px"/>
             <img id="result_image" src="images/average_forehead.png" alt="Forehead Image" width="450px" height="500px"/>
             <img id="result_image" src="images/big_forehead.png" alt="Forehead Image" width="450px" height="500px"/>
             <img id="result_image" src="images/infinite_forehead.png" alt="Forehead Image" width="450px" height="500px"/>-->
         </div>
-        <p id="fmi_result"></p>
+        <h5 id="fmi_result">FMI: ${fmi} <br> Forehead Type:</h5>
+        <script src="scripts/result.js"></script>
     </body>
 </html>

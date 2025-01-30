@@ -1,17 +1,5 @@
-function wait(seconds) {
-    return new Promise(resolve => setTimeout(resolve, seconds*1000));
-}
-
-function result(fmi_type) {
-    document.getElementById("fmi_result").innerHTML = fmi_type;
-}
-
 function input(text) {
     return window.prompt(text)
-}
-
-function print(output, id) {
-    document.getElementById(id).innerHTML = output;
 }
 
 function calculate_fmi(mass, volume, color, gender, personality) {
@@ -62,7 +50,11 @@ function calculate_fmi(mass, volume, color, gender, personality) {
     return FMI;
 }
 
-function calculate_fmi_type(FMI) {
+function calculate_fmi_type(FMI, name) {
+    if (name == "Rick Astley") {
+        return "Rick Astley"
+    }
+
     if (isNaN(FMI)) {
         return ("Error: Please enter a valid number");
     } else if (0 <= FMI && FMI <= 15) {
@@ -90,14 +82,20 @@ document.getElementById('fmi_form').addEventListener('submit', function(event) {
     const gender = document.getElementById('gender').value;
     const personality = document.querySelector('input[name="personality"]:checked').id;
 
-    const fmi = calculate_fmi(mass, volume, color, gender, personality);
-    const fmi_type = calculate_fmi_type(fmi);
+    let fmi = calculate_fmi(mass, volume, color, gender, personality);
+    let fmi_type = calculate_fmi_type(fmi, name);
+
+    console.log(fmi_type)
+
+    localStorage.setItem("name", name); // Store name in localStorage
+    window.location.href = "result.html";
     
-    alert(`${name}, Your FMI is ${fmi}`);
-    alert(`Forehead type: ${fmi_type}`);
+    localStorage.setItem("fmi", fmi); // Store FMI in localStorage
+    window.location.href = "result.html";
 
-    print(`FMI: ${fmi}, Forehead Type: ${fmi_type}`, "fmi_result");
+    localStorage.setItem("fmi_type", fmi_type); // Store fmi_type in localStorage
+    window.location.href = "result.html";
 
-    //print(`Mass: ${mass}`, "fmi_result");
-    //print(`Volume: ${volume}`, "fmi_result");
+    //alert(`${name}, Your FMI is ${fmi}`);
+    //alert(`Forehead type: ${fmi_type}`);
 });

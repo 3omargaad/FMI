@@ -8,12 +8,15 @@
     --teal: #006663;
 }
 
-/* Fonts */
-
+/* Colors */
   
 body {
     background-color: var(--cyan);
     background-image: linear-gradient(to bottom, var(--cyan) 10%, var(--sky) 90%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flexbox;
     justify-content: center;
     align-items: center;
@@ -23,6 +26,7 @@ body {
 
 .heading {
     text-align: center;
+    align-self: center;
     font-size: 1.75em;
     color: var(--blue);
     border: 1;
@@ -35,11 +39,25 @@ i, b {
     color: #212b32;
 }
 
-label, #fmi_result {
+label {
     font-family: "Jua", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 400;
     color: var(--navy);
 }
+
+#fmi_result, #fmi_type_result {
+    font-family: "Jua", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 400;
+    text-align: center;
+    size: 0.5em;
+    color: var(--cream);
+    font-size: 1.75em;
+    padding-right: 33%;
+    padding-left: 33%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
 .personality-label {
     font-weight: normal;
     color: var(--white);
@@ -86,15 +104,6 @@ button {
     cursor: pointer;
 }
 
-#color, #gender, input, #dull {
-    cursor: pointer;
-}
-
-#name, #mass, #volume {
-    cursor: text;
-}
-
-
 button:hover {
     font-family: "Frutiger W01", Arial, sans-serif /*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif*/;
     font-size: 1.5em;
@@ -105,6 +114,14 @@ button:hover {
     border: none;
     height: 50px;
     border-radius: 5px;
+}
+
+#color, #gender, input, #dull {
+    cursor: pointer;
+}
+
+#name, #mass, #volume {
+    cursor: text;
 }
 
 #result {
@@ -133,11 +150,12 @@ button:hover {
     margin-right: 1px;
     margin-left: 1px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 2.5%;
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-right: 200px;
-    margin-left: 200px;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
     text-align: center;
     align-self: center;
     border-style: inset;
@@ -146,21 +164,29 @@ button:hover {
     background-color: var(--white);
 }
 
+#latex {
+    width: 100%;
+    padding-right: 25%;
+    font-size: 75%;
+}
+
 li {
-    margin-right: 1px;
-    margin-left: 1px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5%;
+    padding-bottom: 5%;
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-right: 200px;
-    margin-left: 200px;
+    margin-right: 20%;
+    margin-left: 20%;
     text-align: center;
     align-self: center;
     border-style: inset;
     font-size: 1.2em;
     font-family: "Jua";
     background-color: var(--white);
+}
+
+ol {
+    padding-inline-start: 0%;
 }
 
 .banner {
