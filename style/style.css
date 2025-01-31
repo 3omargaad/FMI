@@ -115,6 +115,7 @@ button:hover {
     height: 50px;
     border-radius: 5px;
 }
+/* Changes Button when hovered over */
 
 #color, #gender, input, #dull {
     cursor: pointer;
@@ -123,6 +124,7 @@ button:hover {
 #name, #mass, #volume {
     cursor: text;
 }
+/* Changes Cursors depending on element hovering over */
 
 #result {
     text-align: center;
@@ -187,10 +189,4 @@ li {
 
 ol {
     padding-inline-start: 0%;
-}
-
-.banner {
-    background-color: #5580db55;
-    margin: 0;
-    align-items:center;
 }

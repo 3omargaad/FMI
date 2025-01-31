@@ -4,25 +4,41 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FMI Calculator</title>
+
         <link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href="style/fonts.css">
+        <link rel="stylesheet" href="style/fonts.css"> 
+        <!--CSS Links-->
+
         <link rel="icon" type="image/png" href="images/icon.png">
-        <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=679be0c09b23f50012715ad4&product=inline-share-buttons&source=platform" async="async"></script>
+        <!--Icon Link-->
+
+        <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=679be0c09b23f50012715ad4&product=inline-share-buttons&source=platform" async="async"></script> 
+        <!--Share Buttons Link-->
     </head>
 
     <body>
         <div class="heading">
             <h1 id="main">Calculate Forehead Mass Index (FMI)</h1> 
         </div>
-        <form id="fmi_form" <!--action="result.html" method="get"-->
+        <!--Heading-->
+
+        <form id="fmi_form" action="result.html"-->
             <label for="name">Forehead Name:</label>
             <input type="text" id="name" class="input_text" placeholder="e.g Rick Astley"> <br> <br>
+            <!--Forehead Name-->
+
             <label for="mass">Forehead Mass (kg):</label>
             <input type="number" id="mass" class="input_text" placeholder="0-100" min="0", max="100" required> <br> <br>
+            <!--Forehead Mass-->
+
             <label for="volume">Forehead Volume (m³):</label>
             <input type="number" id="volume" class="input_text" placeholder="0-100" min="0", max="100" required> <br> <br>
+            <!--Forehead Volume-->
+
             <label for="color">Forehead Colour:</label>
             <input type="color" id="color"> <br> <br>
+            <!--Forehead Color-->
+
             <label for="gender">Forehead Gender:</label>
             <select id="gender">
                 <option value="" disabled selected>Please Select</option>
@@ -30,6 +46,7 @@
                 <option value="Female">Female</option>
                 <option value="Idk">I don't know</option>
              </select> <br> <br>
+            <!--Forehead Gender Options Section-->
 
             <label>How would other people describe your forehead's personality?</label> <br>
             <input type="radio" id="Zen-Vibes" name="personality" value="Zen-Vibes">
@@ -42,13 +59,22 @@
             <label class="personality-label" for="Very-Handsome">Very Handsome</label>
             <input type="radio" id="Big-Brain-Energy" name="personality" value="Big-Brain-Energy">
             <label class="personality-label" for="Big-Brain-Energy">Big Brain Energy</label> <br> <br>
-            
+            <!--Forehead Personality Options Section-->
+
             <label for="age">I have read the <a href="tos.html" target="_blank">Terms Of Service</a> & appreciate my Forehead</label>
             <input type="checkbox" id="age" required> <br> <br>
-            <button type="submit">Calculate</button>
+            <!--Terms of Service Section-->
+
+            <button type="submit">Calculate</button> 
+            <!--Calculate Button-->
         </form>
+        <!--Form Section-->
+
         <script src="scripts/index.js"></script>
+        <!--Main Script to add functionality to the form-->
         <br><br>
+
         <div class="sharethis-inline-share-buttons"></div>
+        <!--Share Buttons-->
     </body>
 </html>
